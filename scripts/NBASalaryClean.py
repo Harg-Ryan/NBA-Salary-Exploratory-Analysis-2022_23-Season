@@ -25,8 +25,8 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.StreamHandler(sys.stdout)])
 #load data
-totals = pd.read_csv(r'C:\Users\Ryan\Documents\GitHub\NBA-Salary-Exploratory-Analysis-2022_23-Season\2023totals.csv')
-salaries = pd.read_csv(r'C:\Users\Ryan\Documents\GitHub\NBA-Salary-Exploratory-Analysis-2022_23-Season\2023salaries.csv')
+totals = pd.read_csv(r'C:\Users\Ryan\Documents\GitHub\NBA-Salary-Exploratory-Analysis-2022_23-Season\data\2023totals.csv')
+salaries = pd.read_csv(r'C:\Users\Ryan\Documents\GitHub\NBA-Salary-Exploratory-Analysis-2022_23-Season\data\2023salaries.csv')
 
 #log checks
 logging.info("Columns in 'totals': %s", totals.columns)
@@ -82,4 +82,4 @@ combined.loc[combined['Player'] == 'T.J. Warren', 'Pos'] = 'SF'
 #ensuring there's only 5 positions now.
 logging.info(combined['Pos'].value_counts())
 
-combined.to_csv('2023StatsAndSalaries.csv', index=False)
+combined.to_csv(r'C:\Users\Ryan\Documents\GitHub\NBA-Salary-Exploratory-Analysis-2022_23-Season\data\2023StatsAndSalaries.csv', index=False)
