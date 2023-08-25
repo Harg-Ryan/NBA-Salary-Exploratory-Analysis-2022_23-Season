@@ -5,8 +5,7 @@ This is an ongoing Python project to analyze and make insights on the salaries a
 
 Currently included:
 
-- 2023salaries.csv, 2023totals.csv, StatsAndSalaries.csv - raw data collected for the project
-- NBASalaryClean.py - a python script that imports and cleans the data.
-- SalaryAnalysis.py - a python script with the majority of the raw computations and methods that will be called upon in the report.
-- NBASalaryAnalysisReport.ipynb - a jupyter notebook presenting the analysis and relevant tables, charts, and anything else necessary for reporting.
+- data - folder containing the CSVs with the gathered salaries, stat totals, and the combined salaries and stats that will be used for the analysis.
+- scripts - a folder containing two python scripts, one to clean the data and create the working dataset, and another script to compute and analyze the dataset.
+- NBASalaryAnalysisReport.ipynb - a jupyter notebook presenting the analysis and relevant tables, charts, along with anything else necessary for reporting.
 
