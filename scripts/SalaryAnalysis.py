@@ -22,8 +22,9 @@ def side_by_side(*dfs):
     display(HTML(html))
 
 #reading in the data
-work = pd.read_csv(r'C:\Users\Ryan\Documents\GitHub\NBA-Salary-Exploratory-Analysis-2022_23-Season\data\2023StatsAndSalaries.csv')
+file_path = "../data/2023StatsAndSalaries.csv"
 
+work = pd.read_csv(file_path)
 #creating a copy of the df to manipulate
 df = work.copy()
 

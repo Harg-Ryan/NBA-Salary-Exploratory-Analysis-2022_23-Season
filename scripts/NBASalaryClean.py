@@ -19,7 +19,6 @@ import numpy as np
 import logging
 import sys  # Import the sys module for console output
 
-
 # Configure logging to display only INFO level messages in the console
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -81,5 +80,6 @@ combined.loc[combined['Player'] == 'T.J. Warren', 'Pos'] = 'SF'
 
 #ensuring there's only 5 positions now.
 logging.info(combined['Pos'].value_counts())
+
 
 combined.to_csv(r'C:\Users\Ryan\Documents\GitHub\NBA-Salary-Exploratory-Analysis-2022_23-Season\data\2023StatsAndSalaries.csv', index=False)
