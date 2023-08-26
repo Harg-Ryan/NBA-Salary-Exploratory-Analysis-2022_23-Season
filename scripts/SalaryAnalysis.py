@@ -59,6 +59,7 @@ df['dollarPerPoint'].replace([np.inf, -np.inf], np.nan, inplace=True)
 
 #CORRELATION
 salaryCorr = pd.DataFrame()
+salaryCorr['All'] = df.corrwith(df['salary'], numeric_only=True).sort_values(ascending=False)[1:]
 
 positions = ['PG', 'SG', 'SF', 'PF', 'C']
 for position in positions:
