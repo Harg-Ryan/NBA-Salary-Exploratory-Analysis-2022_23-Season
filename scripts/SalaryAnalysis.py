@@ -2,20 +2,14 @@
 import pandas as pd
 import numpy as np
 import os
-import plotly.express as px
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-from IPython.display import HTML, display_html, display
-
+from IPython.display import HTML, display
+ 
 
 def side_by_side(*dfs):
-    '''Prints dataframes side by side in a jupyter notebook.'''
+    '''Prints dataframes side by side in a Jupyter notebook.'''
     html = '<div style="display:flex">'
     for df in dfs:
-        html += '<div style="margin-right: 2em">'
-        html += df.to_html()
-        html += '</div>'
+        html += '<div style="margin-right: 2em">{}</div>'.format(df.to_html())
     html += '</div>'
     display(HTML(html))
 
@@ -51,10 +45,8 @@ df['dollarPerFG'] = (df['salary'] / df['FG']).round(2)
 df['dollarPerPoint'] = (df['salary'] / df['PTS']).round(2)
     
 # Replace infinite values with NaN
-df['astToTO'].replace([np.inf, -np.inf], np.nan, inplace=True)
-df['dollarPerMinute'].replace([np.inf, -np.inf], np.nan, inplace=True)
-df['dollarPerFG'].replace([np.inf, -np.inf], np.nan, inplace=True)
-df['dollarPerPoint'].replace([np.inf, -np.inf], np.nan, inplace=True)
+inf_cols = ['astToTO', 'dollarPerMinute', 'dollarPerFG', 'dollarPerPoint']
+df[inf_cols] = df[inf_cols].replace([np.inf, -np.inf], np.nan)
 
 
 #CORRELATION
@@ -71,3 +63,4 @@ for position in positions:
 outliers = df.query('salary > salary.mean() + 3 * salary.std()')
 
 #ax = sns.histplot(data = df, x='Salary', kde=True, bins = 20).set(title='Dist of Salary')
+# Note: The above line is commented out. If you want to use it, uncomment it.
