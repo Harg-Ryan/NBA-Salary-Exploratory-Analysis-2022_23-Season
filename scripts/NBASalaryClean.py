@@ -30,6 +30,7 @@ data_folder = os.path.join(os.path.dirname(__file__), '..', 'data')
 totals_path = os.path.join(data_folder, '2023totals.csv')
 salaries_path= os.path.join(data_folder, '2023salaries.csv')
 
+#read data
 totals = pd.read_csv(totals_path)
 salaries = pd.read_csv(salaries_path)
 
