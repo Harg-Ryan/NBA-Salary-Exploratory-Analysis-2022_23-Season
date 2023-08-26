@@ -5,7 +5,6 @@ This is an ongoing Python project to analyze and make insights on the salaries a
 
 Currently included:
 
-- data - folder containing the CSVs with the gathered salaries, stat totals, and the combined salaries and stats that will be used for the analysis.
-- scripts - a folder containing two python scripts, one to clean the data and create the working dataset, and another script to compute and analyze the dataset.
-- NBASalaryAnalysisReport.ipynb - a jupyter notebook presenting the analysis and relevant tables, charts, along with anything else necessary for reporting.
-[Report](./NBASalaryAnalysisReport.ipynb)
+- **[NBA Salary Anaysis Report]**(./NBASalaryAnalysisReport.ipynb) - A Jupyter notebook reporting on the examination of the data through tables, graphs, and other means.
+- data - A folder containing the CSVs with the gathered salaries, stat totals, and the combined salaries and stats that are used for the analysis.
+- scripts - A folder containing the python scripts used to import, clean, transform, and analyze the data.
