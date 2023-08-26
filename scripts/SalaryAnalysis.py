@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 import random as round
-
+import os
 #visualization
 import plotly.express as px
 import seaborn as sns
@@ -21,10 +21,10 @@ def side_by_side(*dfs):
     html += '</div>'
     display(HTML(html))
 
-#reading in the data
-file_path = "../data/2023StatsAndSalaries.csv"
-
+data_folder = os.path.join(os.path.dirname(__file__), '..', 'data')
+file_path = os.path.join(data_folder, '2023StatsAndSalaries.csv')
 work = pd.read_csv(file_path)
+
 #creating a copy of the df to manipulate
 df = work.copy()
 
