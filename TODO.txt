@@ -13,3 +13,5 @@ corr heatmap just for salary column?
 label side by side dataframes like top 5 correlation, bottom 5 correlation
 
 fix grouped bar chart for max and min salaries for age
+
+side_by_side method not displaying properly when notebook is converted to pdf
