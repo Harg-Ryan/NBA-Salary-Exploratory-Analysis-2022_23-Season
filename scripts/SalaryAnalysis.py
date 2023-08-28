@@ -64,3 +64,7 @@ outliers = df.query('salary > salary.mean() + 3 * salary.std()')
 
 #ax = sns.histplot(data = df, x='Salary', kde=True, bins = 20).set(title='Dist of Salary')
 # Note: The above line is commented out. If you want to use it, uncomment it.
+
+#method?
+def format_with_commas(value):
+    return f'{value:,.2f}'
