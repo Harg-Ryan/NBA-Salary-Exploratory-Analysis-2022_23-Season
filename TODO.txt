@@ -15,3 +15,5 @@ label side by side dataframes like top 5 correlation, bottom 5 correlation - don
 fix grouped bar chart for max and min salaries for age
 
 side_by_side method not displaying properly when notebook is converted to pdf
+
+create a MPG column in salaryanalysis
