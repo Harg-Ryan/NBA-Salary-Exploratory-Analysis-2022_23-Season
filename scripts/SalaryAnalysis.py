@@ -30,9 +30,9 @@ def create_columns(row):
     row['TRPG'] = (row['TRB'] / row['G'])
     row['SPG'] = (row['STL'] / row['G'])
     row['BPG'] = (row['BLK'] / row['G'])
-        
+    row['MPG'] = (row['MP'] / row['G'])
     if row['TOV'] != 0:
-        row['astToTO'] = (row['AST'] / row['TOV'])
+        row['AST/TO'] = (row['AST'] / row['TOV'])
     else:
         row['TOV'] = np.nan
     return row
@@ -45,13 +45,15 @@ df['dollarPerFG'] = (df['salary'] / df['FG']).round(2)
 df['dollarPerPoint'] = (df['salary'] / df['PTS']).round(2)
     
 # Replace infinite values with NaN
-inf_cols = ['astToTO', 'dollarPerMinute', 'dollarPerFG', 'dollarPerPoint']
+inf_cols = ['AST/TO', 'dollarPerMinute', 'dollarPerFG', 'dollarPerPoint']
 df[inf_cols] = df[inf_cols].replace([np.inf, -np.inf], np.nan)
 
 
 #CORRELATION
 salaryCorr = pd.DataFrame()
-salaryCorr['All'] = df.corrwith(df['salary'], numeric_only=True).sort_values(ascending=False)[1:]
+
+df2 = df.drop(columns=['dollarPerMinute','dollarPerFG', 'dollarPerPoint'], axis=1)
+salaryCorr['All'] = df2.corrwith(df2['salary'], numeric_only=True).sort_values(ascending=False)[1:]
 
 positions = ['PG', 'SG', 'SF', 'PF', 'C']
 for position in positions:
@@ -61,9 +63,6 @@ for position in positions:
 
 #OUTLIER
 outliers = df.query('salary > salary.mean() + 3 * salary.std()')
-
-#ax = sns.histplot(data = df, x='Salary', kde=True, bins = 20).set(title='Dist of Salary')
-# Note: The above line is commented out. If you want to use it, uncomment it.
 
 #method?
 def format_with_commas(value):
