@@ -1,19 +1,7 @@
-Run .ipynb python cells through chat gpt for cleaning purposes - done mostly, need to do categorical variables and visual appendecies
-
 solve variables not found mystery without using dummy variables
 
 Link table of contents to approriate places
 
 solve the $ mystery
 
-make graphs look nicer, interactable or have labels? - kinda
-
-corr heatmap just for salary column? - didn't look good
-
-label side by side dataframes like top 5 correlation, bottom 5 correlation - done mostly
-
-fix grouped bar chart for max and min salaries for age
-
 side_by_side method not displaying properly when notebook is converted to pdf
-
-create a MPG column in salaryanalysis
