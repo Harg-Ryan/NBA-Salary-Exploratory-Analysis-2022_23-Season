@@ -62,7 +62,8 @@ for position in positions:
 
 
 #OUTLIER
-outliers = df.query('salary > salary.mean() + 3 * salary.std()')
+outlier_calc = df['salary'].mean() + 3 * df['salary'].std()
+outliers = df.query('salary > @outlier_calc')
 
 #method?
 def format_with_commas(value):
