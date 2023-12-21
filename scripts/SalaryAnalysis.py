@@ -65,9 +65,5 @@ for position in positions:
 outlier_calc = df['salary'].mean() + 3 * df['salary'].std()
 outliers = df.query('salary > @outlier_calc')
 
-#method?
 def format_with_commas(value):
     return f'{value:,.2f}'
-
-#age = sa.df['Age'].rank(method='first', ascending= False) creates a rank for the age column and sorts oldest to youngest
-#age.loc[['LeBron James']] returns 3, so lebron is the 3rd oldest player in the dataset.

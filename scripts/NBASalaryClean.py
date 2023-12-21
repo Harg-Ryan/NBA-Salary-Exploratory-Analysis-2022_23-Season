@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Aug 24, 2023
 
-@author: Ryan
+@author: Ryan Hargreaves
 
 This is the script for creating and cleaning the dataset for the NBA Salary Analysis.
 No columns are added in this process, I only removed or replaced dirty data (dupes, etc)

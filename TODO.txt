@@ -1,7 +1,0 @@
-solve variables not found mystery without using dummy variables
-
-Link table of contents to approriate places
-
-solve the $ mystery
-
-side_by_side method not displaying properly when notebook is converted to pdf
